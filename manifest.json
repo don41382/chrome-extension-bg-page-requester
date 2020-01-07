@@ -1,7 +1,7 @@
 {
    "manifest_version": 2,
    "name": "Background Page Requester",
-   "description": "This extension will automatically request a given page in a given time period and close itafterwards",
+   "description": "This extension will automatically request a given page in a given time period and close it afterwards",
    "author": "Felix Eckhardt",
    "version": "1.0",
 
@@ -11,7 +11,7 @@
    },
 
    "content_scripts": [{
-      "js": [ "js/jquery.min.js", "js/popup.js", "js/bootstrap.min.js", "js/mdb.min.js" ],
+      "js": [ "js/jquery-3.4.1.min.js", "js/popup.js", "js/bootstrap.min.js", "js/mdb.min.js" ],
       "css": [ "css/style.css" , "css/bootstrap.min.css", "css/mdb.lite.min.css"],
       "matches": [ "http://*/*" ]
    }],
@@ -22,7 +22,7 @@
    },
 
    "icons": {
-      "128": "img/iconStore.png",
+      "128": "img/icon128x128.png",
       "16": "img/icon.png",
       "48": "img/iconLauncher.png"
    },

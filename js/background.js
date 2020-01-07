@@ -32,7 +32,7 @@ var runRefresh = function(cfg) {
 
 
 var refresh = function() {
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     url: 'https://www.google.com',
     active: false
   }, function(cfg) {
@@ -43,7 +43,7 @@ var refresh = function() {
 };
 
 var setTimer = function() {
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     repeatTime: 1
   }, function (cfg) {
     chrome.alarms.clearAll(() => {

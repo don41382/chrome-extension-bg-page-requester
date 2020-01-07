@@ -1,18 +1,17 @@
 function save_options() {
-	var inputUrl = document.getElementById('inputUrl');
-	var inputRepeatTime = document.getElementById('inputRepeatTime');
-	var inputActive = document.getElementById('inputActive');
-	chrome.storage.sync.set({
-		url: inputUrl.value,
-		repeatTime: inputRepeatTime.value,
-		active: inputActive.checked
-	}, function () {
-		window.close();
-	});
+	var inputUrl = $('#inputUrl');
+	var inputRepeatTime = $('#inputRepeatTime');
+	var inputActive = $('#inputActive');
+	chrome.storage.local.set({
+		url: inputUrl.val(),
+		repeatTime: inputRepeatTime.val(),
+		active: inputActive.is(':checked')
+	}, function () {});
+	window.close();
 }
 
 function load_options() {
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     url: 'https://www.google.com',
     repeatTime: 10,
     active: false
@@ -25,5 +24,5 @@ function load_options() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	load_options();
-	document.getElementById('save').addEventListener('click',save_options);	
+	$('#save').click(save_options);	
 });
