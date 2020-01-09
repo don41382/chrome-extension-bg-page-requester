@@ -27,5 +27,5 @@
       "48": "img/iconLauncher.png"
    },
 
-   "permissions": [ "activeTab", "storage", "alarms" ]
+   "permissions": [ "tabs", "activeTab", "storage", "alarms" ]
 }
