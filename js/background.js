@@ -5,7 +5,8 @@ function loadTabDetailsAfterLoad(tab, callback) {
   chrome.tabs.query({windowId: tab.windowId, index: tab.index}, function (tabs) {
     const ntab = tabs.pop();
     if (ntab !== undefined && tab.status == "loading") {
-      setTimeout(function() {
+      const timeoutId = setTimeout(function() {
+        clearTimeout(timeoutId);
         loadTabDetailsAfterLoad(ntab, callback);
       }, 500);
     } else {
