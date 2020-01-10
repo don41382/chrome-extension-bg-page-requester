@@ -3,11 +3,11 @@ const TIMER_NAME = "timer";
 
 function loadTabDetailsAfterLoad(tab, callback) {
   chrome.tabs.query({windowId: tab.windowId, index: tab.index}, function (tabs) {
-    const ntab = tabs.pop();
-    if (ntab !== undefined && tab.status == "loading") {
+    const [tab] = tabs  
+    if (tab !== undefined && tab.status == "loading") {
       const timeoutId = setTimeout(function() {
         clearTimeout(timeoutId);
-        loadTabDetailsAfterLoad(ntab, callback);
+        loadTabDetailsAfterLoad(tab, callback);
       }, 500);
     } else {
       return callback(tab);
