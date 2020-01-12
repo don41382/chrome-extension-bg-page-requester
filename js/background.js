@@ -19,9 +19,11 @@ function runRefresh(cfg) {
 
   // query current tab, open new tab, remove new tab
   chrome.tabs.query({highlighted: true, currentWindow: true}, function (tabs) {
-    var lastTab = tabs.pop();
+    var [lastTab] = tabs;
 
-    chrome.tabs.create({ url: cfg.url }, afterTabOpen.bind(this, lastTab));  
+    if (lastTab !== undefined) {
+      chrome.tabs.create({ url: cfg.url }, afterTabOpen.bind(this, lastTab));
+    }
   });
 
   var afterTabOpen = function(lastTab, newTab) {   
