@@ -3,7 +3,7 @@
    "name": "Background Page Requester",
    "description": "This extension will automatically request a given page in a given time period and close it afterwards",
    "author": "Felix Eckhardt",
-   "version": "2.0",
+   "version": "2.1",
 
    "browser_action": {
       "default_icon": "img/icon.png",
