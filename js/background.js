@@ -53,7 +53,7 @@ function runRefresh(cfg) {
           windowId: newTab.windowId,
           tabs: newTab.index
         }, function () {
-          alert('Loaded page with title "'+loadedTab.title+'" didn\'t match expected title: "'+cfg.expectedPageTitle)+'"';
+          alert('The page title doesn\'t start with the expected title:\n\n"'+loadedTab.title+'"" does not start with "'+cfg.expectedPageTitle+'"');
         });    
       }
 

@@ -1,0 +1,29 @@
+.bgextbox {
+  padding: 0px 5px 10px 10px;
+}
+
+.bgextlabel {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.bgextbutton {
+  background-color: #042f64;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+}
+
+.bgextinput {
+  width: 100%;
+  font-size: 15px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.bgextcheckboxdiv {
+	padding: 20px 0px 20px 0px;
+}

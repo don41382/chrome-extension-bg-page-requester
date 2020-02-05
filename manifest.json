@@ -11,8 +11,8 @@
    },
 
    "content_scripts": [{
-      "js": [ "js/jquery-3.4.1.min.js", "js/popup.js", "js/bootstrap.min.js", "js/mdb.min.js" ],
-      "css": [ "css/style.css" , "css/bootstrap.min.css", "css/mdb.lite.min.css"],
+      "js": [ "js/jquery-3.4.1.min.js", "js/popup.js"],
+      "css": [ "css/style.css"],
       "matches": [ "http://*/*" ]
    }],
 
